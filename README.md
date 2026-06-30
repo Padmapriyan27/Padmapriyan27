@@ -8,7 +8,7 @@
 
 <!-- Animated Cyber-Deck Banner -->
 <a href="https://padmapriyan.zeal.ninja">
-  <img src="assets/hero.svg" alt="0xD4rkEYe Terminal HUD" width="850" />
+  <img src="assets/hero-hud.svg" alt="0xD4rkEYe Terminal HUD" width="850" />
 </a>
 
 <br/>
