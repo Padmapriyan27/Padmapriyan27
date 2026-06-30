@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 260" width="100%" height="260">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&amp;family=Share+Tech+Mono&amp;display=swap');
+      
+      .hud-bg { fill: #030402; }
+      .hud-grid { fill: url(#gridPattern); opacity: 0.15; }
+      .hud-frame { fill: none; stroke: #0d2e0f; stroke-width: 1.5; }
+      .hud-accent { fill: #9CFF2E; }
+      
+      .text-orbitron {
+        font-family: 'Orbitron', -apple-system, sans-serif;
+        font-weight: 800;
+        letter-spacing: 1px;
+      }
+      .text-mono {
+        font-family: 'Share Tech Mono', 'Courier New', monospace;
+      }
+      .panel-title {
+        fill: #4c8a3c;
+        font-size: 10px;
+      }
+      .pulse-dot {
+        animation: pulse 2s infinite alternate;
+      }
+      @keyframes pulse {
+        0% { opacity: 0.4; }
+        100% { opacity: 1; filter: drop-shadow(0 0 2px #9CFF2E); }
+      }
+    </style>
+    <pattern id="gridPattern" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#0d2e0f" stroke-width="0.5" />
+    </pattern>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="850" height="260" class="hud-bg" />
+  <rect width="850" height="260" class="hud-grid" />
+
+  <!-- Window Frame -->
+  <rect x="15" y="15" width="820" height="230" rx="4" class="hud-frame" />
+  <line x1="15" y1="38" x2="835" y2="38" stroke="#0d2e0f" stroke-width="1.5" />
+
+  <!-- Window Controls -->
+  <circle cx="35" cy="26" r="4.5" fill="#ff5f56" />
+  <circle cx="47" cy="26" r="4.5" fill="#ffbd2e" />
+  <circle cx="59" cy="26" r="4.5" fill="#27c93f" />
+
+  <text x="80" y="30" class="text-orbitron panel-title">DECK_OS // OPERATOR_PROFILE</text>
+
+  <!-- Panel Splitter -->
+  <line x1="320" y1="38" x2="320" y2="245" stroke="#0d2e0f" stroke-width="1.5" stroke-dasharray="4 4" />
+
+  <!-- ==================== LEFT PANE: REGISTRY ==================== -->
+  <!-- Target Reticle / Scanner HUD -->
+  <g transform="translate(35, 55)">
+    <!-- Scanner frame -->
+    <rect x="0" y="0" width="80" height="85" fill="none" stroke="#0d2e0f" stroke-width="1.5" />
+    <circle cx="40" cy="42" r="28" stroke="#0d2e0f" stroke-width="1" fill="none" />
+    <circle cx="40" cy="42" r="18" stroke="#9CFF2E" stroke-width="1" stroke-dasharray="4 4" fill="none" class="pulse-dot" />
+    <line x1="5" y1="42" x2="75" y2="42" stroke="#9CFF2E" stroke-width="0.5" opacity="0.7" />
+    <line x1="40" y1="7" x2="40" y2="77" stroke="#9CFF2E" stroke-width="0.5" opacity="0.7" />
+    
+    <!-- Target brackets -->
+    <path d="M 5 15 L 5 5 L 15 5" fill="none" stroke="#9CFF2E" stroke-width="1.5" />
+    <path d="M 75 15 L 75 5 L 65 5" fill="none" stroke="#9CFF2E" stroke-width="1.5" />
+    <path d="M 5 70 L 5 80 L 15 80" fill="none" stroke="#9CFF2E" stroke-width="1.5" />
+    <path d="M 75 70 L 75 80 L 65 80" fill="none" stroke="#9CFF2E" stroke-width="1.5" />
+  </g>
+
+  <!-- Profile Metadata Registry -->
+  <g transform="translate(130, 55)" class="text-mono" font-size="13">
+    <text x="0" y="18" fill="#4c8a3c">HANDLE : <tspan fill="#D4FF00" font-weight="bold">0xD4rkEYe</tspan></text>
+    <text x="0" y="38" fill="#4c8a3c">NAME   : <tspan fill="#FFFFFF">Padmapriyan N</tspan></text>
+    <text x="0" y="58" fill="#4c8a3c">REPOS  : <tspan fill="#FFFFFF">14</tspan></text>
+    <text x="0" y="78" fill="#4c8a3c">STATUS : <tspan fill="#9CFF2E" class="pulse-dot">STANDBY</tspan></text>
+  </g>
+
+  <!-- Left Bottom Log Details -->
+  <g transform="translate(35, 165)" class="text-mono" font-size="12.5">
+    <text x="0" y="15" fill="#4c8a3c">&gt; PROFILE_REGISTRY_LOADED:</text>
+    <text x="0" y="35" fill="#B8FF66">FOLLOWERS : <tspan fill="#FFFFFF">2</tspan></text>
+    <text x="0" y="55" fill="#B8FF66">TOTAL_STARS: <tspan fill="#FFFFFF">14</tspan></text>
+    <text x="0" y="70" fill="#B8FF66">DECK_STATUS: <tspan fill="#9CFF2E">SECURE // SHIELD_ON</tspan></text>
+  </g>
+
+  <!-- ==================== RIGHT PANE: DIRECTIVES ==================== -->
+  <g transform="translate(345, 55)">
+    <text x="0" y="15" class="text-orbitron" font-size="11" fill="#D4FF00" letter-spacing="1.5">[ OPERATIONAL_DIRECTIVES ]</text>
+    
+    <!-- Item 1 -->
+    <rect x="0" y="32" width="5" height="5" fill="#9CFF2E" />
+    <text x="15" y="38" class="text-mono" font-size="12.5" fill="#FFFFFF">WEB SECURITY  :: <tspan fill="#B8FF66">Pentesting &amp; custom offensive tools</tspan></text>
+    
+    <!-- Item 2 -->
+    <rect x="0" y="60" width="5" height="5" fill="#9CFF2E" />
+    <text x="15" y="66" class="text-mono" font-size="12.5" fill="#FFFFFF">CTF CHALLENGE :: <tspan fill="#B8FF66">Author for YUKTHI CTF 2.0 (TN Police)</tspan></text>
+
+    <!-- Item 3 -->
+    <rect x="0" y="88" width="5" height="5" fill="#9CFF2E" />
+    <text x="15" y="94" class="text-mono" font-size="12.5" fill="#FFFFFF">COMPILER DEV  :: <tspan fill="#B8FF66">Building security tools in C, Python, PHP</tspan></text>
+
+    <!-- Item 4 -->
+    <rect x="0" y="116" width="5" height="5" fill="#9CFF2E" />
+    <text x="15" y="122" class="text-mono" font-size="12.5" fill="#FFFFFF">FULL-STACK    :: <tspan fill="#B8FF66">Managing Frappe app dev &amp; deployment</tspan></text>
+
+    <!-- Item 5 -->
+    <rect x="0" y="144" width="5" height="5" fill="#D4FF00" />
+    <text x="15" y="150" class="text-mono" font-size="12.5" fill="#FFFFFF">LAB ARCHITECT :: <tspan fill="#B8FF66">Lab Developer @ Selfmade Ninja Academy</tspan></text>
+
+    <!-- Console signature line -->
+    <line x1="0" y1="168" x2="475" y2="168" stroke="#0d2e0f" stroke-width="1" />
+    <text x="0" y="180" class="text-mono" font-size="9.5" fill="#4c8a3c">OPERATIONAL STATUS: SYNCED // 2026-06-30 11:22 UTC</text>
+  </g>
+</svg>

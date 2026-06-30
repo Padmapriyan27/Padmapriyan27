@@ -1,40 +1,42 @@
-<!-- 0xD4rkEYe · macOS Liquid Glass · Single File · No External Assets -->
+<!-- 0xD4rkEYe · Cyber-Deck terminal console · Red Team & Security Research Profile -->
 
 <div align="center">
 
-<!-- ══════════════════════════ HERO ══════════════════════════ -->
+<!-- ══════════════════════════ HUD HEADER ══════════════════════════ -->
 
 <br/>
 
+<!-- Animated Cyber-Deck Banner -->
 <a href="https://padmapriyan.zeal.ninja">
-  <img src="assets/hero.svg" alt="0xD4rkEYe" width="600" />
-</a>
-
-<a href="https://padmapriyan.zeal.ninja">
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=400&size=16&duration=2800&pause=1000&color=9CFF2E&center=true&vCenter=true&repeat=true&width=700&height=32&lines=Cybersecurity+Researcher+%26+CTF+Challenge+Author+%F0%9F%94%90;Web+Security+%C2%B7+Offensive+Tooling+%C2%B7+Red+Team+Ops+%F0%9F%95%B5%EF%B8%8F;Building+Weapons+in+C%2C+Python+%26+PHP+%F0%9F%9B%A0%EF%B8%8F;Frappe+Developer+%26+Full+Stack+Web+Deployer+%F0%9F%9A%80;CTF+%2F+Lab+Developer+%40+Selfmade+Ninja+Academy+%F0%9F%8E%AF;Just+crazy+about+technology+%F0%9F%92%BB" alt="Typing" />
+  <img src="assets/hero.svg" alt="0xD4rkEYe Terminal HUD" width="850" />
 </a>
 
 <br/>
 
-<img src="https://img.shields.io/badge/%E2%97%8F_SIGNAL-ACTIVE-D4FF00?style=for-the-badge&labelColor=0a1a08" />
+<!-- Typing Terminal Sub-header -->
+<a href="https://padmapriyan.zeal.ninja">
+  <img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&amp;weight=400&amp;size=16&amp;duration=2800&amp;pause=1000&amp;color=9CFF2E&amp;center=true&amp;vCenter=true&amp;repeat=true&amp;width=700&amp;height=32&amp;lines=Cybersecurity+Researcher+%26+CTF+Challenge+Author+%F0%9F%94%90;Web+Security+%C2%B7+Offensive+Tooling+%C2%B7+Red+Team+Ops+%F0%9F%95%B5%EF%B8%8F;Building+Weapons+in+C%2C+Python+%26+PHP+%F0%9F%9B%A0%EF%B8%8F;Frappe+Developer+%26+Full+Stack+Web+Deployer+%F0%9F%9A%80;CTF+%2F+Lab+Developer+%40+Selfmade+Ninja+Academy+%F0%9F%8E%AF;Just+crazy+about+technology+%F0%9F%92%BB" alt="Typing Diagnostics" />
+</a>
+
+<br/>
+
+<!-- Core Telemetry Status Badges -->
+<img src="https://img.shields.io/badge/%E2%97%8F_SIGNAL-ACTIVE_DECK-9CFF2E?style=for-the-badge&amp;labelColor=0a1a08" alt="Signal Status" />
 &nbsp;
-<img src="https://komarev.com/ghpvc/?username=Padmapriyan27&color=D4FF00&style=for-the-badge&label=VIEWS&abbreviated=true" />
+<img src="https://komarev.com/ghpvc/?username=Padmapriyan27&amp;color=D4FF00&amp;style=for-the-badge&amp;label=DECK_VIEWS&amp;abbreviated=true" alt="Deck Views" />
 &nbsp;
-<img src="https://img.shields.io/github/followers/Padmapriyan27?style=for-the-badge&color=9CFF2E&labelColor=0a1a08&label=FOLLOWERS&logo=github&logoColor=D4FF00" />
+<img src="https://img.shields.io/github/followers/Padmapriyan27?style=for-the-badge&amp;color=9CFF2E&amp;labelColor=0a1a08&amp;label=FOLLOWERS&amp;logo=github&amp;logoColor=D4FF00" alt="GitHub Followers" />
 &nbsp;
-<img src="https://img.shields.io/github/stars/Padmapriyan27?affiliations=OWNER&style=for-the-badge&color=B8FF66&labelColor=0a1a08&label=STARS&logo=github&logoColor=B8FF66" />
+<img src="https://img.shields.io/github/stars/Padmapriyan27?affiliations=OWNER&amp;style=for-the-badge&amp;color=B8FF66&amp;labelColor=0a1a08&amp;label=STARS&amp;logo=github&amp;logoColor=B8FF66" alt="GitHub Stars" />
 
 <br/><br/>
 
-<a href="https://padmapriyan.zeal.ninja"><img src="https://img.shields.io/badge/Portfolio-padmapriyan.zeal.ninja-D4FF00?style=for-the-badge&labelColor=0a1a08&logo=safari&logoColor=D4FF00" /></a>
+<!-- Navigation Links / Matrix Directories -->
+<a href="https://padmapriyan.zeal.ninja"><img src="https://img.shields.io/badge/Port_Link-padmapriyan.zeal.ninja-D4FF00?style=for-the-badge&amp;labelColor=0a1a08&amp;logo=safari&amp;logoColor=D4FF00" alt="Portfolio" /></a>
 &nbsp;
-<a href="https://linkedin.com/in/0xd4rkeye"><img src="https://img.shields.io/badge/LinkedIn-0xD4rkEYe-9CFF2E?style=for-the-badge&labelColor=0a1a08&logo=linkedin&logoColor=9CFF2E" /></a>
+<a href="https://linkedin.com/in/0xd4rkeye"><img src="https://img.shields.io/badge/Intel_Node-LinkedIn-9CFF2E?style=for-the-badge&amp;labelColor=0a1a08&amp;logo=linkedin&amp;logoColor=9CFF2E" alt="LinkedIn" /></a>
 &nbsp;
-<a href="https://x.com/0xD4rkEYe"><img src="https://img.shields.io/badge/X-@0xD4rkEYe-B8FF66?style=for-the-badge&labelColor=0a1a08&logo=x&logoColor=B8FF66" /></a>
-&nbsp;
-<a href="https://instagram.com/0xd4rkeye"><img src="https://img.shields.io/badge/Instagram-0xd4rkeye-9CFF2E?style=for-the-badge&labelColor=0a1a08&logo=instagram&logoColor=9CFF2E" /></a>
-&nbsp;
-<a href="https://git.selfmade.ninja/0xD4rkEYe"><img src="https://img.shields.io/badge/GitLab-SNA-D4FF00?style=for-the-badge&labelColor=0a1a08&logo=gitlab&logoColor=D4FF00" /></a>
+<a href="https://x.com/0xD4rkEYe"><img src="https://img.shields.io/badge/Comm_Node-X-B8FF66?style=for-the-badge&amp;labelColor=0a1a08&amp;logo=x&amp;logoColor=B8FF66" alt="X / Twitter" /></a>
 
 <br/><br/>
 
@@ -42,262 +44,170 @@
 
 ---
 
-<!-- ══════════════════════════ ABOUT ME ══════════════════════════ -->
+<!-- ══════════════════════════ SYSTEM CONSOLE (ABOUT) ══════════════════════════ -->
 
-<table align="center" width="96%">
-<tr>
-<th align="left" colspan="2">
-&nbsp; 🔴 &nbsp; 🟡 &nbsp; 🟢 &nbsp;&nbsp;&nbsp; About Me
-</th>
-</tr>
-<tr>
-
-<!-- ── LEFT: Identity Card ── -->
-<td width="42%" align="center">
-<br/>
-
-<img src="https://img.shields.io/badge/0xD4rkEYe-D4FF00?style=for-the-badge&labelColor=0a1a08&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iI0Q0RkYwMCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMmExMCAxMCAwIDAgMCAxMCAxMEExMCAxMCAwIDAgMCAxMiAyek0xMiA0YTggOCAwIDAgMSA4IDggOCA4IDAgMCAxLTggOCA4IDggMCAwIDEtOC04IDggOCAwIDAgMSA4LTh6bTAgMmE2IDYgMCAwIDAtNiA2IDYgNiAwIDAgMCA2IDYgNiA2IDAgMCAwIDYtNiA2IDYgMCAwIDAtNi02em0wIDRhMiAyIDAgMSAxIDAgNCAgMiAyIDAgMCAxIDAtNHoiLz48L3N2Zz4=" />
-
-<br/><br/>
-
-<table>
-<tr><td align="right"><b>Handle</b></td><td><img src="https://img.shields.io/badge/-0xD4rkEYe-D4FF00?style=flat-square&labelColor=0a1a08" /></td></tr>
-<tr><td align="right"><b>Name</b></td><td><img src="https://img.shields.io/badge/-Padmapriyan_N-9CFF2E?style=flat-square&labelColor=0a1a08" /></td></tr>
-<tr><td align="right"><b>Org</b></td><td><img src="https://img.shields.io/badge/-Selfmade_Ninja_Academy-B8FF66?style=flat-square&labelColor=0a1a08" /></td></tr>
-<tr><td align="right"><b>Since</b></td><td><img src="https://img.shields.io/badge/-August_2023-D4FF00?style=flat-square&labelColor=0a1a08" /></td></tr>
-<tr><td align="right"><b>Status</b></td><td><img src="https://img.shields.io/badge/-▓▓▓▓▓▓▓▓▓▓_ACTIVE-9CFF2E?style=flat-square&labelColor=0a1a08" /></td></tr>
-</table>
-
-<br/>
-</td>
-
-<!-- ── RIGHT: Mission Brief ── -->
-<td width="58%">
-<br/>
-
-<img src="https://img.shields.io/badge/◈_MISSION_BRIEF-0a1a08?style=for-the-badge&labelColor=0a1a08" />
-
-<br/><br/>
-
-🔐 &nbsp; Cybersecurity researcher — **web security & offensive tooling**
-
-🚩 &nbsp; CTF **challenge author** — YUKTHI CTF 2.0
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *(Tamil Nadu Police collaboration)*
-
-🛠️ &nbsp; Building low-level security tools in **C, Python & PHP**
-
-🚀 &nbsp; Managing full-stack **web application development & deployment** (Frappe)
-
-🎯 &nbsp; CTF / Lab Developer @ [**Selfmade Ninja Academy**](https://selfmade.ninja)
-
-🌐 &nbsp; Portfolio → [**padmapriyan.zeal.ninja**](https://padmapriyan.zeal.ninja)
-
-<br/>
-
-<img src="https://img.shields.io/badge/🔐_Web_Security-D4FF00?style=flat-square&labelColor=0a1a08" />
-<img src="https://img.shields.io/badge/🚩_CTF_Design-9CFF2E?style=flat-square&labelColor=0a1a08" />
-<img src="https://img.shields.io/badge/🚀_Frappe_Dev-B8FF66?style=flat-square&labelColor=0a1a08" />
-<img src="https://img.shields.io/badge/🛡️_Red_Team-D4FF00?style=flat-square&labelColor=0a1a08" />
-
-<br/><br/>
-</td>
-
-</tr>
-</table>
-
-<br/>
-
-<!-- ══════════════════════════ ARSENAL ══════════════════════════ -->
-
-<table align="center" width="96%">
-<tr>
-<th align="left">
-&nbsp; 🔴 &nbsp; 🟡 &nbsp; 🟢 &nbsp;&nbsp;&nbsp; Arsenal
-</th>
-</tr>
-<tr><td>
-<br/>
 <div align="center">
 
-<details open>
-<summary><b>&nbsp; Offensive & Research</b></summary>
-<br/>
+<h3><font color="#D4FF00"><code>[SYS_STATUS // OPERATOR_PROFILE_&amp;_DIRECTIVES]</code></font></h3>
 
 <a href="https://padmapriyan.zeal.ninja">
-<img src="https://skillicons.dev/icons?i=linux,kali,bash&theme=dark&perline=6" />
+  <img src="assets/about.svg" alt="0xD4rkEYe Profile Console" width="850" />
 </a>
-<br/><br/>
-<img src="https://img.shields.io/badge/Burp_Suite-0a1a08?style=for-the-badge&logo=hackthebox&logoColor=D4FF00" />
-<img src="https://img.shields.io/badge/Nmap-0a1a08?style=for-the-badge&logo=gnometerminal&logoColor=D4FF00" />
-<img src="https://img.shields.io/badge/Metasploit-0a1a08?style=for-the-badge&logo=metasploit&logoColor=D4FF00" />
-<img src="https://img.shields.io/badge/Wireshark-0a1a08?style=for-the-badge&logo=wireshark&logoColor=D4FF00" />
-</details>
-
-<details open>
-<summary><b>&nbsp; Languages</b></summary>
-<br/>
-
-<a href="https://padmapriyan.zeal.ninja">
-<img src="https://skillicons.dev/icons?i=c,python,php,js,html,css&theme=dark&perline=6" />
-</a>
-</details>
-
-<details open>
-<summary><b>&nbsp; Infrastructure & DevOps</b></summary>
-<br/>
-
-<a href="https://padmapriyan.zeal.ninja">
-<img src="https://skillicons.dev/icons?i=docker,postgres,redis,nginx,git,gitlab,github,vscode&theme=dark&perline=8" />
-</a>
-</details>
 
 </div>
-<br/>
-</td></tr>
-</table>
 
 <br/>
 
-<!-- ══════════════════════════ PROJECTS ══════════════════════════ -->
+<!-- ══════════════════════════ SYSTEM ARSENAL (SKILLS) ══════════════════════════ -->
 
-<table align="center" width="96%">
+<div align="center">
+  <h3><font color="#D4FF00"><code>[SYS_ARSENAL // SECURITY_TOOLKIT_LOADOUT]</code></font></h3>
+</div>
+
+<table align="center" width="98%">
 <tr>
-<th align="left" colspan="2">
-&nbsp; 🔴 &nbsp; 🟡 &nbsp; 🟢 &nbsp;&nbsp;&nbsp; Projects
-</th>
-</tr>
-<tr>
+<td style="border: 1px solid #0d2e0f; padding: 15px; background-color: #030402;">
 
-<td align="center" width="50%">
-<br/>
-<a href="https://github.com/Padmapriyan27?tab=repositories">
-<img src="https://img.shields.io/badge/🔐_Web_Security_Tools-D4FF00?style=for-the-badge&labelColor=0a1a08" />
-</a>
-<br/><br/>
-Custom offensive tooling for<br/>web app penetration testing.<br/>Built with <b>Python</b> & <b>PHP</b>.
-<br/><br/>
-<img src="https://img.shields.io/badge/Python-D4FF00?style=flat-square&logo=python&logoColor=0a1a08&labelColor=0a1a08" />
-<img src="https://img.shields.io/badge/PHP-9CFF2E?style=flat-square&logo=php&logoColor=0a1a08&labelColor=0a1a08" />
-<img src="https://img.shields.io/badge/-Active-D4FF00?style=flat-square&labelColor=0a1a08" />
-<br/><br/>
-</td>
-
-<td align="center" width="50%">
-<br/>
-<a href="https://github.com/Padmapriyan27?tab=repositories">
-<img src="https://img.shields.io/badge/🚩_CTF_Challenges-9CFF2E?style=for-the-badge&labelColor=0a1a08" />
-</a>
-<br/><br/>
-Challenge design & lab envs<br/>for Selfmade Ninja Academy<br/>& <b>YUKTHI CTF 2.0</b>.
-<br/><br/>
-<img src="https://img.shields.io/badge/Docker-B8FF66?style=flat-square&logo=docker&logoColor=0a1a08&labelColor=0a1a08" />
-<img src="https://img.shields.io/badge/Linux-D4FF00?style=flat-square&logo=linux&logoColor=0a1a08&labelColor=0a1a08" />
-<img src="https://img.shields.io/badge/-Deployed-9CFF2E?style=flat-square&labelColor=0a1a08" />
-<br/><br/>
-</td>
-
-</tr>
-<tr>
-
-<td align="center" width="50%">
-<br/>
-<a href="https://github.com/Padmapriyan27?tab=repositories">
-<img src="https://img.shields.io/badge/🛠️_Low--Level_C_Tools-B8FF66?style=for-the-badge&labelColor=0a1a08" />
-</a>
-<br/><br/>
-System-level security tools<br/>and exploit development<br/>utilities in <b>pure C</b>.
-<br/><br/>
-<img src="https://img.shields.io/badge/C-9CFF2E?style=flat-square&logo=c&logoColor=0a1a08&labelColor=0a1a08" />
-<img src="https://img.shields.io/badge/Bash-D4FF00?style=flat-square&logo=gnubash&logoColor=0a1a08&labelColor=0a1a08" />
-<img src="https://img.shields.io/badge/-In_Progress-B8FF66?style=flat-square&labelColor=0a1a08" />
-<br/><br/>
-</td>
-
-<td align="center" width="50%">
-<br/>
-<a href="https://github.com/Padmapriyan27?tab=repositories">
-<img src="https://img.shields.io/badge/🌐_Frappe_Applications-D4FF00?style=for-the-badge&labelColor=0a1a08" />
-</a>
-<br/><br/>
-Full-stack web application<br/>development & deployment<br/>using the <b>Frappe</b> framework.
-<br/><br/>
-<img src="https://img.shields.io/badge/Frappe-B8FF66?style=flat-square&logo=frappe&logoColor=0a1a08&labelColor=0a1a08" />
-<img src="https://img.shields.io/badge/Docker-D4FF00?style=flat-square&logo=docker&logoColor=0a1a08&labelColor=0a1a08" />
-<img src="https://img.shields.io/badge/-Operational-9CFF2E?style=flat-square&labelColor=0a1a08" />
-<br/><br/>
-</td>
-
-</tr>
-</table>
-
-<br/>
-
-<!-- ══════════════════════════ ANALYTICS ══════════════════════════ -->
-
-<table align="center" width="96%">
-<tr>
-<th align="left">
-&nbsp; 🔴 &nbsp; 🟡 &nbsp; 🟢 &nbsp;&nbsp;&nbsp; GitHub Analytics
-</th>
-</tr>
-<tr><td>
+<details open>
+<summary style="color: #9CFF2E; font-family: 'Courier New', monospace; cursor: pointer; user-select: none;"><b>▶ [DECK_MODULE_01] OFFENSIVE RESEARCH &amp; ANALYSIS</b></summary>
 <br/>
 <div align="center">
+  <a href="https://padmapriyan.zeal.ninja">
+    <img src="https://skillicons.dev/icons?i=linux,kali,bash&amp;theme=dark&amp;perline=6" alt="OS loadout" />
+  </a>
+  <br/><br/>
+  <img src="https://img.shields.io/badge/Burp_Suite-0a1a08?style=for-the-badge&amp;logo=hackthebox&amp;logoColor=D4FF00" alt="Burp Suite" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Nmap-0a1a08?style=for-the-badge&amp;logo=gnometerminal&amp;logoColor=9CFF2E" alt="Nmap" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Metasploit-0a1a08?style=for-the-badge&amp;logo=metasploit&amp;logoColor=B8FF66" alt="Metasploit" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Wireshark-0a1a08?style=for-the-badge&amp;logo=wireshark&amp;logoColor=D4FF00" alt="Wireshark" />
+</div>
+<br/>
+</details>
 
-<!-- ROW 1: General Stats + Isometric Calendar -->
-<a href="https://github.com/Padmapriyan27">
-  <img width="49%" src="assets/github-metrics.svg" />
-</a>
-<a href="https://github.com/Padmapriyan27">
-  <img width="49%" src="assets/github-isocalendar.svg" />
+<details open>
+<summary style="color: #9CFF2E; font-family: 'Courier New', monospace; cursor: pointer; user-select: none;"><b>▶ [DECK_MODULE_02] COMPILER SYSTEMS &amp; RUNTIMES</b></summary>
+<br/>
+<div align="center">
+  <a href="https://padmapriyan.zeal.ninja">
+    <img src="https://skillicons.dev/icons?i=c,python,php,js,html,css&amp;theme=dark&amp;perline=6" alt="Programming Languages" />
+  </a>
+</div>
+<br/>
+</details>
+
+<details open>
+<summary style="color: #9CFF2E; font-family: 'Courier New', monospace; cursor: pointer; user-select: none;"><b>▶ [DECK_MODULE_03] ORCHESTRATION &amp; INFRASTRUCTURE</b></summary>
+<br/>
+<div align="center">
+  <a href="https://padmapriyan.zeal.ninja">
+    <img src="https://skillicons.dev/icons?i=docker,postgres,redis,nginx,git,gitlab,github,vscode&amp;theme=dark&amp;perline=8" alt="Infrastructure Tools" />
+  </a>
+</div>
+<br/>
+</details>
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+<!-- ══════════════════════════ PROJECTS (MISSIONS) ══════════════════════════ -->
+
+<div align="center">
+
+<h3><font color="#D4FF00"><code>[SYS_MISSIONS // ACTIVE_OBJECTIVES_DATABASE]</code></font></h3>
+
+<a href="https://github.com/Padmapriyan27?tab=repositories">
+  <img src="assets/projects.svg" alt="0xD4rkEYe Active Missions Database" width="850" />
 </a>
 
-<br/><br/>
+</div>
 
-<!-- ROW 2: Top Languages + Coding Habits -->
+<br/>
+
+<!-- ══════════════════════════ TELEMETRY (ANALYTICS) ══════════════════════════ -->
+
+<div align="center">
+  <h3><font color="#D4FF00"><code>[SYS_TELEMETRY // COMPUTATIONAL_METRICS_DASHBOARD]</code></font></h3>
+</div>
+
+<table align="center" width="98%">
+<tr>
+<td style="border: 1px solid #0d2e0f; padding: 15px; background-color: #030402;">
+
+<div align="center">
+
+<!-- ROW 1: Stats Card + Streak -->
 <a href="https://github.com/Padmapriyan27">
-  <img width="49%" src="assets/github-languages.svg" />
-</a>
-<a href="https://github.com/Padmapriyan27">
-  <img width="49%" src="assets/github-habits.svg" />
+  <img width="49%" src="https://streak-stats.demolab.com?user=Padmapriyan27&amp;hide_border=true&amp;background=030402&amp;stroke=0d2e0f&amp;ring=D4FF00&amp;fire=D4FF00&amp;currStreakLabel=D4FF00&amp;sideLabels=9CFF2E&amp;currStreakNum=B8FF66&amp;sideNums=B8FF66&amp;dates=B8FF6644&amp;excludeDaysLabel=0d2e0f&amp;card_width=500" alt="Streak Stats" />
 </a>
 
-<br/><br/>
+<br/>
+
+<!-- ROW 2: Top Languages + Productive Time -->
+<a href="https://github.com/Padmapriyan27">
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Padmapriyan27&amp;theme=github_dark&amp;utcOffset=5.5" alt="Productive Time" />
+</a>
+
+<br/>
 
 <!-- ROW 3: Stock Market Ticker Header -->
-<img src="https://img.shields.io/badge/▲_CONTRIBUTIONS-LIVE_FEED-D4FF00?style=for-the-badge&labelColor=0a1a08&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iI0Q0RkYwMCIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBkPSJNMSAxM0wzIDlMNiAxMUw5IDVMMTIgOEwxNSAzIiBmaWxsPSJub25lIiBzdHJva2U9IiNENEZGMDAiIHN0cm9rZS13aWR0aD0iMS41Ii8+PC9zdmc+" />
+<img src="https://img.shields.io/badge/▲_CONTRIBUTIONS-LIVE_FEED-D4FF00?style=for-the-badge&amp;labelColor=0a1a08&amp;logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iI0Q0RkYwMCIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBkPSJNMSAxM0wzIDlMNiAxMUw5IDVMMTIgOEwxNSAzIiBmaWxsPSJub25lIiBzdHJva2U9IiNENEZGMDAiIHN0cm9rZS13aWR0aD0iMS41Ii8+PC9zdmc+" alt="Contributions Live" />
 &nbsp;
-<img src="https://img.shields.io/badge/%E2%97%8F_MARKET-OPEN-9CFF2E?style=flat-square&labelColor=0a1a08" />
+<img src="https://img.shields.io/badge/%E2%97%8F_MARKET-OPEN-9CFF2E?style=flat-square&amp;labelColor=0a1a08" alt="Market status" />
 &nbsp;
-<img src="https://img.shields.io/github/commit-activity/m/Padmapriyan27/Padmapriyan27?style=flat-square&color=B8FF66&labelColor=0a1a08&label=%F0%9F%93%88+Monthly" />
+<img src="https://img.shields.io/github/commit-activity/m/Padmapriyan27/Padmapriyan27?style=flat-square&amp;color=B8FF66&amp;labelColor=0a1a08&amp;label=%F0%9F%93%88+Monthly" alt="Monthly commits" />
 &nbsp;
-<img src="https://img.shields.io/github/last-commit/Padmapriyan27/Padmapriyan27?style=flat-square&color=D4FF00&labelColor=0a1a08&label=%E2%8F%B1+Last+Push" />
+<img src="https://img.shields.io/github/last-commit/Padmapriyan27/Padmapriyan27?style=flat-square&amp;color=D4FF00&amp;labelColor=0a1a08&amp;label=%E2%8F%B1+Last+Push" alt="Last Push" />
+
+<br/><br/>
+
+<!-- ROW 4: Contribution Activity Graph (Stock Chart Style) -->
+<a href="https://github.com/Padmapriyan27">
+  <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=Padmapriyan27&amp;bg_color=030402&amp;color=9CFF2E&amp;line=D4FF00&amp;point=D4FF00&amp;area_color=142e08&amp;area=true&amp;hide_border=true&amp;height=320&amp;radius=3&amp;custom_title=%E2%96%B2%20Contribution%20Streamline%20%C2%B7%200xD4rkEYe" alt="Contribution Graph" />
+</a>
+
+<br/>
+
+<!-- ROW 5: Market Indicators (Repos + Commits by Language) -->
+<a href="https://github.com/Padmapriyan27">
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Padmapriyan27&amp;theme=github_dark" alt="Repos per Language" />
+</a>
+&nbsp;
+<a href="https://github.com/Padmapriyan27">
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Padmapriyan27&amp;theme=github_dark" alt="Most Commits Language" />
+</a>
+
+<br/>
+
+<!-- ROW 6: Commit Timeline (Profile Details) -->
+<a href="https://github.com/Padmapriyan27">
+  <img width="98%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Padmapriyan27&amp;theme=github_dark" alt="Profile Details" />
+</a>
+
+<br/>
+
+<!-- ROW 7: Stats Ticker Tape -->
+<a href="https://github.com/Padmapriyan27">
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Padmapriyan27&amp;theme=github_dark" alt="Analytics Stats" />
+</a>
+&nbsp;
+<a href="https://github.com/Padmapriyan27">
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Padmapriyan27&amp;theme=github_dark&amp;utcOffset=5.5" alt="Productive Time Details" />
+</a>
+
+<br/>
 
 </div>
-<br/>
-</td></tr>
+
+</td>
+</tr>
 </table>
 
-<br/>
-
-
-
-<!-- ══════════════════════════ FOOTER ══════════════════════════ -->
-
-<div align="center">
-
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark&quote=The+quieter+you+become%2C+the+more+you+can+hear.&author=Kali+Linux&border=true" width="70%" />
-
 <br/><br/>
-
-<img src="https://img.shields.io/badge/theme-Liquid_Glass_%E2%97%86_macOS-0a1a08?style=flat-square&labelColor=030402" />
-&nbsp;
-<img src="https://img.shields.io/badge/palette-%23D4FF00_%C2%B7_%239CFF2E_%C2%B7_%23B8FF66-0a1a08?style=flat-square&labelColor=030402" />
-&nbsp;
-<img src="https://img.shields.io/badge/crafted_with-neon_%26_caffeine_%E2%98%95-0a1a08?style=flat-square&labelColor=030402" />
-
-<br/><br/>
-
-</div>
 
 <!-- EOF -->

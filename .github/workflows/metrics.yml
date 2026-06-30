@@ -102,20 +102,18 @@ jobs:
               text-shadow: 0 0 3px rgba(212, 255, 0, 0.4) !important;
             }
 
-      # 4. Isometric Contribution Calendar (Cyber Green theme)
-      - name: Isometric Contribution Calendar
+      # 4. Standard Contribution Calendar (Cyber Green theme)
+      - name: Contribution Calendar
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
-          filename: assets/github-isocalendar.svg
+          filename: assets/github-calendar.svg
           user: Padmapriyan27
           base: ""
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
+          plugin_calendar: yes
+          plugin_calendar_limit: 1
           config_timezone: Asia/Kolkata
           config_theme: dark
-          # Custom color spectrum matching user's theme: deep-dark green to bright neon yellow-lime
-          plugin_calendar_colors: "#0a1a08, #143d0b, #9CFF2E, #D4FF00, #FFFFFF"
           extras_css: |
             svg {
               background: #030402 !important;

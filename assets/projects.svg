@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 280" width="100%" height="280">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&amp;family=Share+Tech+Mono&amp;display=swap');
+      
+      .hud-bg { fill: #030402; }
+      .hud-grid { fill: url(#gridPattern); opacity: 0.15; }
+      .hud-frame { fill: none; stroke: #0d2e0f; stroke-width: 1.5; }
+      .card-frame { fill: #030402; stroke: #0d2e0f; stroke-width: 1.2; }
+      
+      .text-orbitron {
+        font-family: 'Orbitron', -apple-system, sans-serif;
+        font-weight: 800;
+        letter-spacing: 1px;
+      }
+      .text-mono {
+        font-family: 'Share Tech Mono', 'Courier New', monospace;
+      }
+      .panel-title {
+        fill: #4c8a3c;
+        font-size: 10px;
+      }
+      .card-title {
+        fill: #D4FF00;
+        font-size: 12.5px;
+        font-weight: bold;
+      }
+      .card-label {
+        fill: #4c8a3c;
+        font-size: 11px;
+      }
+      .card-val {
+        fill: #FFFFFF;
+        font-size: 11px;
+      }
+      .card-val-highlight {
+        fill: #9CFF2E;
+        font-size: 11px;
+      }
+      .card-val-yellow {
+        fill: #ffbd2e;
+        font-size: 11px;
+      }
+      .card-val-gray {
+        fill: #8c8c8c;
+        font-size: 11px;
+      }
+      .status-pulse {
+        animation: pulse 1.8s infinite alternate;
+      }
+      @keyframes pulse {
+        0% { opacity: 0.5; }
+        100% { opacity: 1; }
+      }
+    </style>
+    <pattern id="gridPattern" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#0d2e0f" stroke-width="0.5" />
+    </pattern>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="850" height="280" class="hud-bg" />
+  <rect width="850" height="280" class="hud-grid" />
+
+  <!-- Window Frame -->
+  <rect x="15" y="15" width="820" height="250" rx="4" class="hud-frame" />
+  <line x1="15" y1="38" x2="835" y2="38" stroke="#0d2e0f" stroke-width="1.5" />
+
+  <!-- Window Controls -->
+  <circle cx="35" cy="26" r="4.5" fill="#ff5f56" />
+  <circle cx="47" cy="26" r="4.5" fill="#ffbd2e" />
+  <circle cx="59" cy="26" r="4.5" fill="#27c93f" />
+
+  <text x="80" y="30" class="text-orbitron panel-title">DECK_OS // DYNAMIC_MISSIONS_DATABASE</text>
+
+  <!-- ==================== CARD 1 ==================== -->
+  <g transform="translate(30, 52)">
+    <rect width="380" height="90" rx="3" class="card-frame" />
+    <path d="M 5 15 L 5 5 L 15 5" fill="none" stroke="#4c8a3c" stroke-width="1" />
+    <path d="M 375 75 L 375 85 L 365 85" fill="none" stroke="#4c8a3c" stroke-width="1" />
+    
+    <text x="18" y="24" class="text-mono card-title">📂 TARGET_01 // MALICIOUS-REPO</text>
+    <text x="18" y="46" class="text-mono card-label">OBJECTIVE : <tspan class="card-val">No description provided.</tspan></text>
+    <text x="18" y="64" class="text-mono card-label">SYSTEMS   : <tspan class="card-val">No description provided.</tspan></text>
+    <text x="18" y="80" class="text-mono card-label">STATUS    : <tspan class="card-val-gray status-pulse">SLEEPING // STABLE</tspan></text>
+    
+    <!-- Activity Index Progress Bar -->
+    <rect x="235" y="72" width="125" height="7" rx="2.5" fill="#0d2e0f" />
+    <rect x="235" y="72" width="15" height="7" rx="2.5" fill="#D4FF00" />
+  </g>
+
+  <!-- ==================== CARD 2 ==================== -->
+  <g transform="translate(440, 52)">
+    <rect width="380" height="90" rx="3" class="card-frame" />
+    <path d="M 5 15 L 5 5 L 15 5" fill="none" stroke="#4c8a3c" stroke-width="1" />
+    <path d="M 375 75 L 375 85 L 365 85" fill="none" stroke="#4c8a3c" stroke-width="1" />
+    
+    <text x="18" y="24" class="text-mono card-title">📂 TARGET_02 // HEADERX</text>
+    <text x="18" y="46" class="text-mono card-label">OBJECTIVE : <tspan class="card-val">HeaderX is a HTTP header analysis tool that f...</tspan></text>
+    <text x="18" y="64" class="text-mono card-label">SYSTEMS   : <tspan class="card-val">Python</tspan></text>
+    <text x="18" y="80" class="text-mono card-label">STATUS    : <tspan class="card-val-gray status-pulse">SLEEPING // STABLE</tspan></text>
+    
+    <rect x="235" y="72" width="125" height="7" rx="2.5" fill="#0d2e0f" />
+    <rect x="235" y="72" width="15" height="7" rx="2.5" fill="#D4FF00" />
+  </g>
+
+  <!-- ==================== CARD 3 ==================== -->
+  <g transform="translate(30, 160)">
+    <rect width="380" height="90" rx="3" class="card-frame" />
+    <path d="M 5 15 L 5 5 L 15 5" fill="none" stroke="#4c8a3c" stroke-width="1" />
+    <path d="M 375 75 L 375 85 L 365 85" fill="none" stroke="#4c8a3c" stroke-width="1" />
+    
+    <text x="18" y="24" class="text-mono card-title">📂 TARGET_03 // VOICE-ASSISTANT</text>
+    <text x="18" y="46" class="text-mono card-label">OBJECTIVE : <tspan class="card-val">No description provided.</tspan></text>
+    <text x="18" y="64" class="text-mono card-label">RUNTIMES  : <tspan class="card-val">JavaScript</tspan></text>
+    <text x="18" y="80" class="text-mono card-label">STATUS    : <tspan class="card-val-gray status-pulse">SLEEPING // STABLE</tspan></text>
+    
+    <rect x="235" y="72" width="125" height="7" rx="2.5" fill="#0d2e0f" />
+    <rect x="235" y="72" width="15" height="7" rx="2.5" fill="#D4FF00" />
+  </g>
+
+  <!-- ==================== CARD 4 ==================== -->
+  <g transform="translate(440, 160)">
+    <rect width="380" height="90" rx="3" class="card-frame" />
+    <path d="M 5 15 L 5 5 L 15 5" fill="none" stroke="#4c8a3c" stroke-width="1" />
+    <path d="M 375 75 L 375 85 L 365 85" fill="none" stroke="#4c8a3c" stroke-width="1" />
+    
+    <text x="18" y="24" class="text-mono card-title">📂 TARGET_04 // LAHTP-PASSWORDTEST-TOOL</text>
+    <text x="18" y="46" class="text-mono card-label">OBJECTIVE : <tspan class="card-val">No description provided.</tspan></text>
+    <text x="18" y="64" class="text-mono card-label">STACK     : <tspan class="card-val">C</tspan></text>
+    <text x="18" y="80" class="text-mono card-label">STATUS    : <tspan class="card-val-gray status-pulse">SLEEPING // STABLE</tspan></text>
+    
+    <rect x="235" y="72" width="125" height="7" rx="2.5" fill="#0d2e0f" />
+    <rect x="235" y="72" width="15" height="7" rx="2.5" fill="#D4FF00" />
+  </g>
+</svg>

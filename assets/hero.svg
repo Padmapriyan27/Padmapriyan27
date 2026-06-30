@@ -1,118 +1,391 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 120" width="100%" height="120">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 260" width="100%" height="260">
   <defs>
-    <!-- Gradient for the outer cooler flame layer -->
-    <linearGradient id="glowGradOuter" x1="0%" y1="100%" x2="0%" y2="0%">
-      <stop offset="0%" stop-color="#0a1a08" />
-      <stop offset="50%" stop-color="#9CFF2E" />
-      <stop offset="100%" stop-color="#D4FF00" />
+    <!-- Import Google Fonts for futuristic monospace and headers -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&amp;family=Share+Tech+Mono&amp;display=swap');
+
+      /* GLOBAL AND HUD VARIABLES */
+      :root {
+        --color-bg: #030402;
+        --color-border: #0d2e0f;
+        --color-border-glow: #143d0b;
+        --color-accent-lime: #9CFF2E;
+        --color-accent-yellow: #D4FF00;
+        --color-active: #B8FF66;
+        --color-dark-green: #0a1a08;
+      }
+
+      /* ANIMATIONS */
+      @keyframes scanline {
+        0% { transform: translateY(-260px); }
+        100% { transform: translateY(260px); }
+      }
+
+      @keyframes radar-rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      @keyframes blink-dot-1 {
+        0%, 100% { opacity: 0.1; }
+        7.5% { opacity: 1; filter: drop-shadow(0 0 4px var(--color-accent-yellow)); }
+        40% { opacity: 0.2; }
+      }
+
+      @keyframes blink-dot-2 {
+        0%, 100% { opacity: 0.1; }
+        67% { opacity: 1; filter: drop-shadow(0 0 4px var(--color-accent-lime)); }
+        90% { opacity: 0.2; }
+      }
+
+      @keyframes cursor-blink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+
+      @keyframes waveform-flow {
+        from { stroke-dashoffset: 240; }
+        to { stroke-dashoffset: 0; }
+      }
+
+      @keyframes matrix-pulse {
+        0%, 100% { fill: #071506; }
+        50% { fill: var(--color-accent-lime); filter: drop-shadow(0 0 2px var(--color-accent-lime)); }
+      }
+
+      @keyframes neon-glow {
+        0%, 100% {
+          text-shadow: 0 0 8px rgba(156, 255, 46, 0.6), 0 0 15px rgba(212, 255, 0, 0.4);
+        }
+        50% {
+          text-shadow: 0 0 14px rgba(156, 255, 46, 0.9), 0 0 25px rgba(212, 255, 0, 0.6);
+        }
+      }
+
+      @keyframes status-pulse {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
+      }
+
+      /* STYLE CLASSES */
+      .hud-bg {
+        fill: #030402;
+      }
+
+      .hud-grid {
+        fill: url(#gridPattern);
+        opacity: 0.15;
+      }
+
+      .hud-frame {
+        fill: none;
+        stroke: #0d2e0f;
+        stroke-width: 1.5;
+      }
+
+      .hud-accent {
+        fill: var(--color-accent-lime);
+      }
+
+      .hud-accent-yellow {
+        fill: var(--color-accent-yellow);
+      }
+
+      .radar-line {
+        stroke: #0d2e0f;
+        stroke-width: 1;
+        fill: none;
+      }
+
+      .radar-sweep {
+        transform-origin: 110px 130px;
+        animation: radar-rotate 4s linear infinite;
+      }
+
+      .radar-dot-1 {
+        animation: blink-dot-1 4s infinite;
+      }
+
+      .radar-dot-2 {
+        animation: blink-dot-2 4s infinite;
+      }
+
+      .text-orbitron {
+        font-family: 'Orbitron', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-weight: 800;
+      }
+
+      .text-mono {
+        font-family: 'Share Tech Mono', 'Courier New', Courier, monospace;
+      }
+
+      .title-glowing {
+        fill: var(--color-accent-yellow);
+        font-size: 34px;
+        letter-spacing: 4px;
+        animation: neon-glow 3s ease-in-out infinite;
+      }
+
+      .console-header {
+        fill: #4c8a3c;
+        font-size: 11px;
+        letter-spacing: 2px;
+      }
+
+      .console-text {
+        fill: var(--color-accent-lime);
+        font-size: 13.5px;
+        letter-spacing: 0.5px;
+      }
+
+      .console-text-dim {
+        fill: #4c8a3c;
+        font-size: 13.5px;
+        letter-spacing: 0.5px;
+      }
+
+      .console-cursor {
+        animation: cursor-blink 1s infinite;
+      }
+
+      .scope-line {
+        fill: none;
+        stroke: #0d2e0f;
+        stroke-width: 1;
+      }
+
+      .scope-wave {
+        fill: none;
+        stroke: var(--color-accent-lime);
+        stroke-width: 1.5;
+        stroke-dasharray: 40 80;
+        animation: waveform-flow 3s linear infinite;
+      }
+
+      .matrix-node {
+        animation: matrix-pulse 2s infinite ease-in-out;
+      }
+
+      .scan-line {
+        fill: url(#scanGradient);
+        opacity: 0.04;
+        pointer-events: none;
+        animation: scanline 6s linear infinite;
+      }
+
+      .panel-title {
+        fill: #4c8a3c;
+        font-size: 10px;
+        letter-spacing: 1px;
+        font-weight: 600;
+      }
+
+      .status-active {
+        fill: var(--color-accent-lime);
+        animation: status-pulse 1.5s infinite;
+      }
+    </style>
+
+    <!-- Background Grid Pattern -->
+    <pattern id="gridPattern" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#0d2e0f" stroke-width="0.5" />
+    </pattern>
+
+    <!-- Scanline Sweep Gradient -->
+    <linearGradient id="scanGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9CFF2E" stop-opacity="0" />
+      <stop offset="50%" stop-color="#9CFF2E" stop-opacity="1" />
+      <stop offset="100%" stop-color="#9CFF2E" stop-opacity="0" />
     </linearGradient>
 
-    <!-- Gradient for the inner hotter flame layer -->
-    <linearGradient id="glowGradInner" x1="0%" y1="100%" x2="0%" y2="0%">
-      <stop offset="0%" stop-color="#0a1a08" />
-      <stop offset="40%" stop-color="#D4FF00" />
-      <stop offset="100%" stop-color="#FFFFFF" />
-    </linearGradient>
-
-    <!-- Gradient for the foreground text -->
-    <linearGradient id="textGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" />
-      <stop offset="30%" stop-color="#E6FF80" />
-      <stop offset="70%" stop-color="#D4FF00" />
-      <stop offset="100%" stop-color="#9CFF2E" />
-    </linearGradient>
-
-    <!-- Flame displacement filter 1 (Inner Flame) -->
-    <filter id="flame-filter-1" x="-20%" y="-50%" width="140%" height="200%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.015 0.06" numOctaves="2" result="noise">
-        <animate attributeName="baseFrequency" dur="1.8s" repeatCount="indefinite"
-                 values="0.015 0.06; 0.02 0.1; 0.015 0.06" />
-      </feTurbulence>
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="20" xChannelSelector="R" yChannelSelector="G" result="displaced" />
-      <feGaussianBlur in="displaced" stdDeviation="4" />
-    </filter>
-
-    <!-- Flame displacement filter 2 (Outer Flame - More distorted) -->
-    <filter id="flame-filter-2" x="-20%" y="-50%" width="140%" height="200%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.01 0.04" numOctaves="2" result="noise">
-        <animate attributeName="baseFrequency" dur="1.2s" repeatCount="indefinite"
-                 values="0.01 0.04; 0.015 0.08; 0.01 0.04" />
-      </feTurbulence>
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="30" xChannelSelector="R" yChannelSelector="G" result="displaced" />
-      <feGaussianBlur in="displaced" stdDeviation="6" />
-    </filter>
-
-    <!-- Subtle warp for the foreground text -->
-    <filter id="subtle-warp">
-      <feTurbulence type="fractalNoise" baseFrequency="0.005 0.02" numOctaves="1" result="noise">
-        <animate attributeName="baseFrequency" dur="3s" repeatCount="indefinite"
-                 values="0.005 0.02; 0.008 0.03; 0.005 0.02" />
-      </feTurbulence>
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
-    </filter>
+    <!-- Radar Sweep Wedge Gradient -->
+    <radialGradient id="radarSweep" cx="110" cy="130" r="75" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#9CFF2E" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#9CFF2E" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#9CFF2E" stop-opacity="0" />
+    </radialGradient>
   </defs>
 
-  <style>
-    .glow-outer {
-      fill: url(#glowGradOuter);
-      filter: url(#flame-filter-2);
-      opacity: 0.5;
-      transform-origin: 0px 0px;
-      animation: flicker-outer 1.5s infinite alternate ease-in-out;
-    }
-    
-    .glow-inner {
-      fill: url(#glowGradInner);
-      filter: url(#flame-filter-1);
-      opacity: 0.8;
-      transform-origin: 0px 0px;
-      animation: flicker-inner 1s infinite alternate ease-in-out;
-    }
-    
-    .front-text {
-      fill: url(#textGrad);
-      filter: url(#subtle-warp) drop-shadow(0 2px 6px rgba(212, 255, 0, 0.6));
-      transform-origin: 0px 0px;
-      animation: flicker-front 2s infinite alternate ease-in-out;
-    }
+  <!-- Background Layer -->
+  <rect width="850" height="260" class="hud-bg" />
+  <rect width="850" height="260" class="hud-grid" />
 
-    @keyframes flicker-outer {
-      0% {
-        transform: scale(0.98, 0.95) translate(0px, 2px);
-      }
-      100% {
-        transform: scale(1.03, 1.08) translate(1px, -8px);
-      }
-    }
-
-    @keyframes flicker-inner {
-      0% {
-        transform: scale(0.99, 0.97) translate(0px, 1px);
-      }
-      100% {
-        transform: scale(1.02, 1.04) translate(-1px, -5px);
-      }
-    }
-
-    @keyframes flicker-front {
-      0% {
-        transform: scale(1) translate(0px, 0px);
-      }
-      100% {
-        transform: scale(1.003) translate(0px, -1px);
-      }
-    }
-  </style>
-
-  <!-- Container for centering elements relative to (300, 70) -->
-  <g transform="translate(300, 70)">
-    <!-- Layer 3: Outer cooler flame (Green) -->
-    <path class="glow-outer" d="M-134.79 19.15L-141.29 12.66L-141.29-13.55L-134.79-20.05L-117.43-20.05L-110.94-13.55L-110.94 12.66L-117.43 19.15L-134.79 19.15ZM-131.21 12.66L-121.02 12.66L-118.55 10.19L-118.55-11.09L-121.02-13.55L-131.21-13.55L-133.67-11.09L-133.67 10.19L-131.21 12.66ZM-78.57 19.15L-86.91 19.15L-93.07 10.64L-99.23 19.15L-107.58 19.15L-97.16 4.98L-107.30-8.74L-98.95-8.74L-93.07-0.56L-87.19-8.74L-78.85-8.74L-88.93 5.10L-78.57 19.15ZM-74.65 19.15L-74.65-20.05L-49.56-20.05L-42.84-13.33L-42.84 12.43L-49.56 19.15L-74.65 19.15ZM-67.03 12.66L-53.31 12.66L-50.46 9.80L-50.46-10.70L-53.31-13.55L-67.03-13.55L-67.03 12.66ZM-20.27 19.15L-20.27 11.87L-39.20 11.87L-39.20 4.20L-21.78-20.05L-12.66-20.05L-12.66 5.38L-7.90 5.38L-7.90 11.87L-12.66 11.87L-12.66 19.15L-20.27 19.15ZM-31.75 5.60L-19.94 5.60L-19.94-11.54L-20.16-11.54L-31.75 4.82L-31.75 5.60ZM-3.98 19.15L-3.98-8.74L2.86-8.74L2.86-4.09L7.34-8.74L15.29-8.74L15.29-2.46L8.85-2.46L3.42 3.14L3.42 19.15L-3.98 19.15ZM18.93 19.15L18.93-20.83L26.32-20.83L26.32 1.51L31.19 1.51L38.30-8.74L46.48-8.74L37.18 4.70L47.04 19.15L38.86 19.15L31.02 7.78L26.32 7.78L26.32 19.15L18.93 19.15ZM50.96 19.15L50.96-20.05L79.30-20.05L79.30-13.61L58.58-13.61L58.58-3.70L77.67-3.70L77.67 2.63L58.58 2.63L58.58 12.71L79.30 12.71L79.30 19.15L50.96 19.15ZM95.20 19.15L95.20 3.14L81.26-20.05L89.60-20.05L98.95-3.98L99.06-3.98L108.42-20.05L116.76-20.05L102.82 3.14L102.82 19.15L95.20 19.15ZM120.18 19.15L114.52 13.44L114.52-2.91L120.29-8.74L136.02-8.74L141.85-2.91L141.85 7.67L121.91 7.67L121.91 11.26L123.70 13.10L132.83 13.10L134.51 11.37L134.51 9.91L141.79 9.91L141.79 13.55L136.25 19.15L120.18 19.15ZM121.91 2.52L134.46 2.52L134.46-0.73L132.55-2.69L123.82-2.69L121.91-0.73L121.91 2.52Z" />
+  <!-- outer frame brackets -->
+  <g>
+    <!-- Top-Left Corner Bracket -->
+    <path d="M 12 30 L 12 12 L 30 12" class="hud-frame" stroke-width="2" />
+    <rect x="12" y="12" width="4" height="4" class="hud-accent" />
     
-    <!-- Layer 2: Inner hotter flame (Lime) -->
-    <path class="glow-inner" d="M-134.79 19.15L-141.29 12.66L-141.29-13.55L-134.79-20.05L-117.43-20.05L-110.94-13.55L-110.94 12.66L-117.43 19.15L-134.79 19.15ZM-131.21 12.66L-121.02 12.66L-118.55 10.19L-118.55-11.09L-121.02-13.55L-131.21-13.55L-133.67-11.09L-133.67 10.19L-131.21 12.66ZM-78.57 19.15L-86.91 19.15L-93.07 10.64L-99.23 19.15L-107.58 19.15L-97.16 4.98L-107.30-8.74L-98.95-8.74L-93.07-0.56L-87.19-8.74L-78.85-8.74L-88.93 5.10L-78.57 19.15ZM-74.65 19.15L-74.65-20.05L-49.56-20.05L-42.84-13.33L-42.84 12.43L-49.56 19.15L-74.65 19.15ZM-67.03 12.66L-53.31 12.66L-50.46 9.80L-50.46-10.70L-53.31-13.55L-67.03-13.55L-67.03 12.66ZM-20.27 19.15L-20.27 11.87L-39.20 11.87L-39.20 4.20L-21.78-20.05L-12.66-20.05L-12.66 5.38L-7.90 5.38L-7.90 11.87L-12.66 11.87L-12.66 19.15L-20.27 19.15ZM-31.75 5.60L-19.94 5.60L-19.94-11.54L-20.16-11.54L-31.75 4.82L-31.75 5.60ZM-3.98 19.15L-3.98-8.74L2.86-8.74L2.86-4.09L7.34-8.74L15.29-8.74L15.29-2.46L8.85-2.46L3.42 3.14L3.42 19.15L-3.98 19.15ZM18.93 19.15L18.93-20.83L26.32-20.83L26.32 1.51L31.19 1.51L38.30-8.74L46.48-8.74L37.18 4.70L47.04 19.15L38.86 19.15L31.02 7.78L26.32 7.78L26.32 19.15L18.93 19.15ZM50.96 19.15L50.96-20.05L79.30-20.05L79.30-13.61L58.58-13.61L58.58-3.70L77.67-3.70L77.67 2.63L58.58 2.63L58.58 12.71L79.30 12.71L79.30 19.15L50.96 19.15ZM95.20 19.15L95.20 3.14L81.26-20.05L89.60-20.05L98.95-3.98L99.06-3.98L108.42-20.05L116.76-20.05L102.82 3.14L102.82 19.15L95.20 19.15ZM120.18 19.15L114.52 13.44L114.52-2.91L120.29-8.74L136.02-8.74L141.85-2.91L141.85 7.67L121.91 7.67L121.91 11.26L123.70 13.10L132.83 13.10L134.51 11.37L134.51 9.91L141.79 9.91L141.79 13.55L136.25 19.15L120.18 19.15ZM121.91 2.52L134.46 2.52L134.46-0.73L132.55-2.69L123.82-2.69L121.91-0.73L121.91 2.52Z" />
+    <!-- Top-Right Corner Bracket -->
+    <path d="M 838 30 L 838 12 L 820 12" class="hud-frame" stroke-width="2" />
+    <rect x="834" y="12" width="4" height="4" class="hud-accent" />
     
-    <!-- Layer 1: Foreground text -->
-    <path class="front-text" d="M-134.79 19.15L-141.29 12.66L-141.29-13.55L-134.79-20.05L-117.43-20.05L-110.94-13.55L-110.94 12.66L-117.43 19.15L-134.79 19.15ZM-131.21 12.66L-121.02 12.66L-118.55 10.19L-118.55-11.09L-121.02-13.55L-131.21-13.55L-133.67-11.09L-133.67 10.19L-131.21 12.66ZM-78.57 19.15L-86.91 19.15L-93.07 10.64L-99.23 19.15L-107.58 19.15L-97.16 4.98L-107.30-8.74L-98.95-8.74L-93.07-0.56L-87.19-8.74L-78.85-8.74L-88.93 5.10L-78.57 19.15ZM-74.65 19.15L-74.65-20.05L-49.56-20.05L-42.84-13.33L-42.84 12.43L-49.56 19.15L-74.65 19.15ZM-67.03 12.66L-53.31 12.66L-50.46 9.80L-50.46-10.70L-53.31-13.55L-67.03-13.55L-67.03 12.66ZM-20.27 19.15L-20.27 11.87L-39.20 11.87L-39.20 4.20L-21.78-20.05L-12.66-20.05L-12.66 5.38L-7.90 5.38L-7.90 11.87L-12.66 11.87L-12.66 19.15L-20.27 19.15ZM-31.75 5.60L-19.94 5.60L-19.94-11.54L-20.16-11.54L-31.75 4.82L-31.75 5.60ZM-3.98 19.15L-3.98-8.74L2.86-8.74L2.86-4.09L7.34-8.74L15.29-8.74L15.29-2.46L8.85-2.46L3.42 3.14L3.42 19.15L-3.98 19.15ZM18.93 19.15L18.93-20.83L26.32-20.83L26.32 1.51L31.19 1.51L38.30-8.74L46.48-8.74L37.18 4.70L47.04 19.15L38.86 19.15L31.02 7.78L26.32 7.78L26.32 19.15L18.93 19.15ZM50.96 19.15L50.96-20.05L79.30-20.05L79.30-13.61L58.58-13.61L58.58-3.70L77.67-3.70L77.67 2.63L58.58 2.63L58.58 12.71L79.30 12.71L79.30 19.15L50.96 19.15ZM95.20 19.15L95.20 3.14L81.26-20.05L89.60-20.05L98.95-3.98L99.06-3.98L108.42-20.05L116.76-20.05L102.82 3.14L102.82 19.15L95.20 19.15ZM120.18 19.15L114.52 13.44L114.52-2.91L120.29-8.74L136.02-8.74L141.85-2.91L141.85 7.67L121.91 7.67L121.91 11.26L123.70 13.10L132.83 13.10L134.51 11.37L134.51 9.91L141.79 9.91L141.79 13.55L136.25 19.15L120.18 19.15ZM121.91 2.52L134.46 2.52L134.46-0.73L132.55-2.69L123.82-2.69L121.91-0.73L121.91 2.52Z" />
+    <!-- Bottom-Left Corner Bracket -->
+    <path d="M 12 230 L 12 248 L 30 248" class="hud-frame" stroke-width="2" />
+    <rect x="12" y="244" width="4" height="4" class="hud-accent" />
+    
+    <!-- Bottom-Right Corner Bracket -->
+    <path d="M 838 230 L 838 248 L 820 248" class="hud-frame" stroke-width="2" />
+    <rect x="834" y="244" width="4" height="4" class="hud-accent" />
   </g>
+
+  <!-- Panels Sub-borders -->
+  <g stroke="#0d2e0f" stroke-width="1" fill="none">
+    <!-- Left Radar Panel Border -->
+    <rect x="25" y="25" width="170" height="210" rx="3" />
+    <!-- Middle Console Panel Border -->
+    <rect x="210" y="25" width="430" height="210" rx="3" />
+    <!-- Right Telemetry Panel Border -->
+    <rect x="655" y="25" width="170" height="210" rx="3" />
+  </g>
+
+  <!-- PANEL HEADERS -->
+  <g class="text-orbitron">
+    <text x="35" y="42" class="panel-title">[01-RADAR-SCAN]</text>
+    <text x="220" y="42" class="panel-title">[02-SECURITY-CONSOLE]</text>
+    <text x="665" y="42" class="panel-title">[03-DIAG-WAVE]</text>
+  </g>
+
+  <!-- ==================== LEFT PANEL: RADAR ==================== -->
+  <g>
+    <!-- Radar Grid Circles -->
+    <circle cx="110" cy="130" r="70" class="radar-line" />
+    <circle cx="110" cy="130" r="50" class="radar-line" stroke-dasharray="2 4" />
+    <circle cx="110" cy="130" r="30" class="radar-line" />
+    <circle cx="110" cy="130" r="10" class="radar-line" />
+    
+    <!-- Radar Crosshairs -->
+    <line x1="40" y1="130" x2="180" y2="130" class="radar-line" />
+    <line x1="110" y1="60" x2="110" y2="200" class="radar-line" />
+    
+    <!-- Rotating Sweep Wedge -->
+    <path d="M 110 130 L 110 60 A 70 70 0 0 1 159.5 80.5 Z" fill="url(#radarSweep)" class="radar-sweep" />
+    
+    <!-- Synchronized Blinking Targets -->
+    <!-- Target 1: Top-Right Quadrant (Approx 26.5 deg, Delay: 0.3s) -->
+    <circle cx="130" cy="90" r="3" fill="var(--color-accent-yellow)" class="radar-dot-1" style="animation-delay: 0.3s;" />
+    <circle cx="130" cy="90" r="6" stroke="var(--color-accent-yellow)" stroke-width="0.5" fill="none" class="radar-dot-1" style="animation-delay: 0.3s;" />
+    
+    <!-- Target 2: Bottom-Left Quadrant (Approx 241 deg, Delay: 2.68s) -->
+    <circle cx="65" cy="155" r="3" fill="var(--color-accent-lime)" class="radar-dot-2" style="animation-delay: 2.68s;" />
+    <circle cx="65" cy="155" r="6" stroke="var(--color-accent-lime)" stroke-width="0.5" fill="none" class="radar-dot-2" style="animation-delay: 2.68s;" />
+
+    <!-- Radar Coordinates overlay -->
+    <text x="110" y="215" class="text-mono" font-size="9" fill="#4c8a3c" text-anchor="middle">COORD: 11.23N / 72.84E</text>
+    <text x="110" y="225" class="text-mono" font-size="8" fill="#4c8a3c" text-anchor="middle">SWEEP IN PROGRESS...</text>
+  </g>
+
+  <!-- ==================== MIDDLE PANEL: CONSOLE ==================== -->
+  <!-- Centered Identity & Hacker Console Lines -->
+  <g transform="translate(425, 0)">
+    <!-- Glow behind Title -->
+    <text x="0" y="90" class="text-orbitron title-glowing" text-anchor="middle">0xD4rkEYe</text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="115" class="text-mono" font-size="12" fill="#B8FF66" text-anchor="middle">CYBERSECURITY RESEARCHER &amp; OFFENSIVE OPERATOR</text>
+    
+    <!-- Console Dividers -->
+    <line x1="-180" y1="130" x2="180" y2="130" stroke="#0d2e0f" stroke-dasharray="4 4" />
+
+    <!-- Simulated Command stdout Lines -->
+    <g transform="translate(0, 140)" class="text-mono">
+      <!-- Line 1 -->
+      <text x="-180" y="10" class="console-text-dim">&gt; SNA_DECK_LINK:</text>
+      <text x="-65" y="10" class="console-text">ACTIVE // ESTABLISHED</text>
+      <circle cx="115" cy="6" r="3.5" class="status-active" />
+
+      <!-- Line 2 -->
+      <text x="-180" y="30" class="console-text-dim">&gt; TARGET_ENV:</text>
+      <text x="-80" y="30" class="console-text">YUKTHI_CTF_2.0 // CHALLENGE_AUTHOR</text>
+
+      <!-- Line 3 -->
+      <text x="-180" y="50" class="console-text-dim">&gt; OBJECTIVE:</text>
+      <text x="-85" y="50" class="console-text">WEAPONIZING C, PYTHON &amp; PHP</text>
+
+      <!-- Line 4 (with blinking cursor) -->
+      <text x="-180" y="70" class="console-text-dim">&gt; SYSTEM_STATUS:</text>
+      <text x="-65" y="70" class="console-text">LISTENING FOR CONNECTIONS...</text>
+      <rect x="148" y="59" width="7" height="13" fill="var(--color-accent-lime)" class="console-cursor" />
+    </g>
+  </g>
+
+  <!-- Decorative crosshairs in middle console -->
+  <path d="M 215 30 L 225 30" stroke="#0d2e0f" />
+  <path d="M 215 30 L 215 40" stroke="#0d2e0f" />
+  <path d="M 635 30 L 625 30" stroke="#0d2e0f" />
+  <path d="M 635 30 L 635 40" stroke="#0d2e0f" />
+  <path d="M 215 230 L 225 230" stroke="#0d2e0f" />
+  <path d="M 215 230 L 215 220" stroke="#0d2e0f" />
+  <path d="M 635 230 L 625 230" stroke="#0d2e0f" />
+  <path d="M 635 230 L 635 220" stroke="#0d2e0f" />
+
+  <!-- ==================== RIGHT PANEL: TELEMETRY ==================== -->
+  <g transform="translate(655, 0)">
+    <!-- Oscilloscope Frame -->
+    <rect x="15" y="55" width="140" height="60" class="scope-line" rx="2" />
+    <line x1="15" y1="85" x2="155" y2="85" class="scope-line" stroke-dasharray="2 2" />
+    <line x1="85" y1="55" x2="85" y2="115" class="scope-line" stroke-dasharray="2 2" />
+    
+    <!-- Oscilloscope Flowing Wave -->
+    <g clip-path="url(#scopeClip)">
+      <path class="scope-wave" d="M 15 85 Q 25 60 35 85 T 55 85 T 75 85 T 95 85 T 115 85 T 135 85 T 155 85" />
+      <!-- Duplicate path shifted to make seamless scrolling -->
+      <path class="scope-wave" d="M -105 85 Q -95 60 -85 85 T -65 85 T -45 85 T -25 85 T -5 85 T 15 85 T 35 85" style="animation-delay: -1.5s;" />
+    </g>
+    
+    <clipPath id="scopeClip">
+      <rect x="16" y="56" width="138" height="58" />
+    </clipPath>
+
+    <!-- Grid Matrix (Computing Nodes simulation) -->
+    <!-- 4x4 Grid of nodes that flash randomly -->
+    <g transform="translate(15, 125)">
+      <!-- Row 1 -->
+      <rect x="0" y="0" width="8" height="8" rx="1.5" class="matrix-node" style="animation-delay: 0.1s; animation-duration: 1.4s;" />
+      <rect x="12" y="0" width="8" height="8" rx="1.5" class="matrix-node" style="animation-delay: 0.6s; animation-duration: 2.1s;" />
+      <rect x="24" y="0" width="8" height="8" rx="1.5" class="matrix-node" style="animation-delay: 1.2s; animation-duration: 1.8s;" />
+      <rect x="36" y="0" width="8" height="8" rx="1.5" class="matrix-node" style="animation-delay: 0.3s; animation-duration: 2.5s;" />
+      
+      <!-- Row 2 -->
+      <rect x="0" y="12" width="8" height="8" rx="1.5" class="matrix-node" style="animation-delay: 1.5s; animation-duration: 1.7s;" />
+      <rect x="12" y="12" width="8" height="8" rx="1.5" class="matrix-node" style="animation-delay: 0.2s; animation-duration: 1.3s;" />
+      <rect x="24" y="12" width="8" height="8" rx="1.5" class="matrix-node" style="animation-delay: 0.9s; animation-duration: 2.2s;" />
+      <rect x="36" y="12" width="8" height="8" rx="1.5" class="matrix-node" style="animation-delay: 0.7s; animation-duration: 1.9s;" />
+      
+      <!-- Row 3 -->
+      <rect x="0" y="24" width="8" height="8" rx="1.5" class="matrix-node" style="animation-delay: 0.5s; animation-duration: 2.0s;" />
+      <rect x="12" y="24" width="8" height="8" rx="1.5" class="matrix-node" style="animation-delay: 1.1s; animation-duration: 1.6s;" />
+      <rect x="24" y="24" width="8" height="8" rx="1.5" class="matrix-node" style="animation-delay: 0.4s; animation-duration: 2.4s;" />
+      <rect x="36" y="24" width="8" height="8" rx="1.5" class="matrix-node" style="animation-delay: 1.7s; animation-duration: 1.5s;" />
+    </g>
+
+    <!-- Side Stats/Data -->
+    <g transform="translate(65, 125)" class="text-mono" font-size="9" fill="#4c8a3c">
+      <text x="0" y="8">&gt; FREQ: 2.44GHz</text>
+      <text x="0" y="20">&gt; LOSS: 0.00%</text>
+      <text x="0" y="32">&gt; CHNL: RedOps</text>
+    </g>
+
+    <!-- Diagnostics Checklist (Bottom right) -->
+    <g transform="translate(15, 172)" class="text-mono" font-size="9.5">
+      <!-- Item 1 -->
+      <rect x="0" y="0" width="6" height="6" fill="var(--color-accent-lime)" />
+      <text x="12" y="7" fill="var(--color-accent-lime)">[+] EXP_DEV: ON</text>
+      
+      <!-- Item 2 -->
+      <rect x="0" y="14" width="6" height="6" fill="var(--color-accent-lime)" />
+      <text x="12" y="21" fill="var(--color-accent-lime)">[+] WAF_BYPASS: OK</text>
+      
+      <!-- Item 3 -->
+      <rect x="0" y="28" width="6" height="6" fill="var(--color-accent-yellow)" />
+      <text x="12" y="35" fill="var(--color-accent-yellow)">[*] FRAPPE_DB: STABLE</text>
+      
+      <!-- Item 4 -->
+      <rect x="0" y="42" width="6" height="6" fill="var(--color-accent-lime)" />
+      <text x="12" y="49" fill="var(--color-accent-lime)">[+] ROOT_ACCESS: YES</text>
+    </g>
+  </g>
+
+  <!-- Scanning Sweep Overlay Line -->
+  <rect width="850" height="15" class="scan-line" />
 </svg>
