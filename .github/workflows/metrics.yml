@@ -13,19 +13,35 @@ jobs:
     permissions:
       contents: write
     steps:
-      # 1. Base Metrics (Overview, Commits, Stars, Repositories)
-      - name: Base Metrics
+      # 1. Base Metrics (Terminal Theme)
+      - name: Base Metrics (Terminal Interface)
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
           filename: assets/github-metrics.svg
           user: Padmapriyan27
-          template: classic
+          template: terminal
           base: header, activity, community, repositories
           config_timezone: Asia/Kolkata
-          config_order: header, activity, community, repositories
+          config_theme: dark
+          extras_css: |
+            svg {
+              background: #030402 !important;
+              border: 1.5px solid #0d2e0f !important;
+              border-radius: 8px !important;
+            }
+            text, tspan, .field {
+              fill: #9CFF2E !important;
+              font-family: 'Courier New', Courier, monospace !important;
+            }
+            .title, text.title, .header {
+              fill: #D4FF00 !important;
+              font-family: 'Courier New', Courier, monospace !important;
+              font-weight: bold !important;
+              text-shadow: 0 0 3px rgba(212, 255, 0, 0.4) !important;
+            }
 
-      # 2. Languages Metrics (Most used languages and sizes)
+      # 2. Languages Metrics (Hacker Overlay)
       - name: Language Metrics
         uses: lowlighter/metrics@latest
         with:
@@ -38,8 +54,25 @@ jobs:
           plugin_languages_details: bytes-size, percentages
           plugin_languages_limit: 8
           config_timezone: Asia/Kolkata
+          config_theme: dark
+          extras_css: |
+            svg {
+              background: #030402 !important;
+              border: 1.5px solid #0d2e0f !important;
+              border-radius: 8px !important;
+            }
+            text, tspan, .field {
+              fill: #9CFF2E !important;
+              font-family: 'Courier New', Courier, monospace !important;
+            }
+            h2, .title, text.title, .header {
+              fill: #D4FF00 !important;
+              font-family: 'Courier New', Courier, monospace !important;
+              font-weight: bold !important;
+              text-shadow: 0 0 3px rgba(212, 255, 0, 0.4) !important;
+            }
 
-      # 3. Coding Habits & Productive Time
+      # 3. Coding Habits & Productive Time (Matrix Overlay)
       - name: Coding Habits
         uses: lowlighter/metrics@latest
         with:
@@ -51,8 +84,25 @@ jobs:
           plugin_habits_facts: yes
           plugin_habits_charts: yes
           config_timezone: Asia/Kolkata
+          config_theme: dark
+          extras_css: |
+            svg {
+              background: #030402 !important;
+              border: 1.5px solid #0d2e0f !important;
+              border-radius: 8px !important;
+            }
+            text, tspan, .field {
+              fill: #9CFF2E !important;
+              font-family: 'Courier New', Courier, monospace !important;
+            }
+            h2, .title, text.title, .header {
+              fill: #D4FF00 !important;
+              font-family: 'Courier New', Courier, monospace !important;
+              font-weight: bold !important;
+              text-shadow: 0 0 3px rgba(212, 255, 0, 0.4) !important;
+            }
 
-      # 4. Isometric Contribution Calendar (3D graph of activity)
+      # 4. Isometric Contribution Calendar (Cyber Green theme)
       - name: Isometric Contribution Calendar
         uses: lowlighter/metrics@latest
         with:
@@ -63,3 +113,22 @@ jobs:
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
           config_timezone: Asia/Kolkata
+          config_theme: dark
+          # Custom color spectrum matching user's theme: deep-dark green to bright neon yellow-lime
+          plugin_calendar_colors: "#0a1a08, #143d0b, #9CFF2E, #D4FF00, #FFFFFF"
+          extras_css: |
+            svg {
+              background: #030402 !important;
+              border: 1.5px solid #0d2e0f !important;
+              border-radius: 8px !important;
+            }
+            text, tspan {
+              fill: #9CFF2E !important;
+              font-family: 'Courier New', Courier, monospace !important;
+            }
+            h2, .title, text.title {
+              fill: #D4FF00 !important;
+              font-family: 'Courier New', Courier, monospace !important;
+              font-weight: bold !important;
+              text-shadow: 0 0 3px rgba(212, 255, 0, 0.4) !important;
+            }
