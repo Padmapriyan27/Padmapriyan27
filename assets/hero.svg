@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 120" width="100%" height="120">
+  <defs>
+    <!-- Gradient for the outer cooler flame layer -->
+    <linearGradient id="glowGradOuter" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#0a1a08" />
+      <stop offset="50%" stop-color="#9CFF2E" />
+      <stop offset="100%" stop-color="#D4FF00" />
+    </linearGradient>
+
+    <!-- Gradient for the inner hotter flame layer -->
+    <linearGradient id="glowGradInner" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#0a1a08" />
+      <stop offset="40%" stop-color="#D4FF00" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+
+    <!-- Gradient for the foreground text -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="30%" stop-color="#E6FF80" />
+      <stop offset="70%" stop-color="#D4FF00" />
+      <stop offset="100%" stop-color="#9CFF2E" />
+    </linearGradient>
+
+    <!-- Flame displacement filter 1 (Inner Flame) -->
+    <filter id="flame-filter-1" x="-20%" y="-50%" width="140%" height="200%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.015 0.06" numOctaves="2" result="noise">
+        <animate attributeName="baseFrequency" dur="1.8s" repeatCount="indefinite"
+                 values="0.015 0.06; 0.02 0.1; 0.015 0.06" />
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="20" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+      <feGaussianBlur in="displaced" stdDeviation="4" />
+    </filter>
+
+    <!-- Flame displacement filter 2 (Outer Flame - More distorted) -->
+    <filter id="flame-filter-2" x="-20%" y="-50%" width="140%" height="200%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01 0.04" numOctaves="2" result="noise">
+        <animate attributeName="baseFrequency" dur="1.2s" repeatCount="indefinite"
+                 values="0.01 0.04; 0.015 0.08; 0.01 0.04" />
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="30" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+      <feGaussianBlur in="displaced" stdDeviation="6" />
+    </filter>
+
+    <!-- Subtle warp for the foreground text -->
+    <filter id="subtle-warp">
+      <feTurbulence type="fractalNoise" baseFrequency="0.005 0.02" numOctaves="1" result="noise">
+        <animate attributeName="baseFrequency" dur="3s" repeatCount="indefinite"
+                 values="0.005 0.02; 0.008 0.03; 0.005 0.02" />
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </defs>
+
+  <style>
+    .glow-outer {
+      fill: url(#glowGradOuter);
+      filter: url(#flame-filter-2);
+      opacity: 0.5;
+      transform-origin: 0px 0px;
+      animation: flicker-outer 1.5s infinite alternate ease-in-out;
+    }
+    
+    .glow-inner {
+      fill: url(#glowGradInner);
+      filter: url(#flame-filter-1);
+      opacity: 0.8;
+      transform-origin: 0px 0px;
+      animation: flicker-inner 1s infinite alternate ease-in-out;
+    }
+    
+    .front-text {
+      fill: url(#textGrad);
+      filter: url(#subtle-warp) drop-shadow(0 2px 6px rgba(212, 255, 0, 0.6));
+      transform-origin: 0px 0px;
+      animation: flicker-front 2s infinite alternate ease-in-out;
+    }
+
+    @keyframes flicker-outer {
+      0% {
+        transform: scale(0.98, 0.95) translate(0px, 2px);
+      }
+      100% {
+        transform: scale(1.03, 1.08) translate(1px, -8px);
+      }
+    }
+
+    @keyframes flicker-inner {
+      0% {
+        transform: scale(0.99, 0.97) translate(0px, 1px);
+      }
+      100% {
+        transform: scale(1.02, 1.04) translate(-1px, -5px);
+      }
+    }
+
+    @keyframes flicker-front {
+      0% {
+        transform: scale(1) translate(0px, 0px);
+      }
+      100% {
+        transform: scale(1.003) translate(0px, -1px);
+      }
+    }
+  </style>
+
+  <!-- Container for centering elements relative to (300, 70) -->
+  <g transform="translate(300, 70)">
+    <!-- Layer 3: Outer cooler flame (Green) -->
+    <path class="glow-outer" d="M-134.79 19.15L-141.29 12.66L-141.29-13.55L-134.79-20.05L-117.43-20.05L-110.94-13.55L-110.94 12.66L-117.43 19.15L-134.79 19.15ZM-131.21 12.66L-121.02 12.66L-118.55 10.19L-118.55-11.09L-121.02-13.55L-131.21-13.55L-133.67-11.09L-133.67 10.19L-131.21 12.66ZM-78.57 19.15L-86.91 19.15L-93.07 10.64L-99.23 19.15L-107.58 19.15L-97.16 4.98L-107.30-8.74L-98.95-8.74L-93.07-0.56L-87.19-8.74L-78.85-8.74L-88.93 5.10L-78.57 19.15ZM-74.65 19.15L-74.65-20.05L-49.56-20.05L-42.84-13.33L-42.84 12.43L-49.56 19.15L-74.65 19.15ZM-67.03 12.66L-53.31 12.66L-50.46 9.80L-50.46-10.70L-53.31-13.55L-67.03-13.55L-67.03 12.66ZM-20.27 19.15L-20.27 11.87L-39.20 11.87L-39.20 4.20L-21.78-20.05L-12.66-20.05L-12.66 5.38L-7.90 5.38L-7.90 11.87L-12.66 11.87L-12.66 19.15L-20.27 19.15ZM-31.75 5.60L-19.94 5.60L-19.94-11.54L-20.16-11.54L-31.75 4.82L-31.75 5.60ZM-3.98 19.15L-3.98-8.74L2.86-8.74L2.86-4.09L7.34-8.74L15.29-8.74L15.29-2.46L8.85-2.46L3.42 3.14L3.42 19.15L-3.98 19.15ZM18.93 19.15L18.93-20.83L26.32-20.83L26.32 1.51L31.19 1.51L38.30-8.74L46.48-8.74L37.18 4.70L47.04 19.15L38.86 19.15L31.02 7.78L26.32 7.78L26.32 19.15L18.93 19.15ZM50.96 19.15L50.96-20.05L79.30-20.05L79.30-13.61L58.58-13.61L58.58-3.70L77.67-3.70L77.67 2.63L58.58 2.63L58.58 12.71L79.30 12.71L79.30 19.15L50.96 19.15ZM95.20 19.15L95.20 3.14L81.26-20.05L89.60-20.05L98.95-3.98L99.06-3.98L108.42-20.05L116.76-20.05L102.82 3.14L102.82 19.15L95.20 19.15ZM120.18 19.15L114.52 13.44L114.52-2.91L120.29-8.74L136.02-8.74L141.85-2.91L141.85 7.67L121.91 7.67L121.91 11.26L123.70 13.10L132.83 13.10L134.51 11.37L134.51 9.91L141.79 9.91L141.79 13.55L136.25 19.15L120.18 19.15ZM121.91 2.52L134.46 2.52L134.46-0.73L132.55-2.69L123.82-2.69L121.91-0.73L121.91 2.52Z" />
+    
+    <!-- Layer 2: Inner hotter flame (Lime) -->
+    <path class="glow-inner" d="M-134.79 19.15L-141.29 12.66L-141.29-13.55L-134.79-20.05L-117.43-20.05L-110.94-13.55L-110.94 12.66L-117.43 19.15L-134.79 19.15ZM-131.21 12.66L-121.02 12.66L-118.55 10.19L-118.55-11.09L-121.02-13.55L-131.21-13.55L-133.67-11.09L-133.67 10.19L-131.21 12.66ZM-78.57 19.15L-86.91 19.15L-93.07 10.64L-99.23 19.15L-107.58 19.15L-97.16 4.98L-107.30-8.74L-98.95-8.74L-93.07-0.56L-87.19-8.74L-78.85-8.74L-88.93 5.10L-78.57 19.15ZM-74.65 19.15L-74.65-20.05L-49.56-20.05L-42.84-13.33L-42.84 12.43L-49.56 19.15L-74.65 19.15ZM-67.03 12.66L-53.31 12.66L-50.46 9.80L-50.46-10.70L-53.31-13.55L-67.03-13.55L-67.03 12.66ZM-20.27 19.15L-20.27 11.87L-39.20 11.87L-39.20 4.20L-21.78-20.05L-12.66-20.05L-12.66 5.38L-7.90 5.38L-7.90 11.87L-12.66 11.87L-12.66 19.15L-20.27 19.15ZM-31.75 5.60L-19.94 5.60L-19.94-11.54L-20.16-11.54L-31.75 4.82L-31.75 5.60ZM-3.98 19.15L-3.98-8.74L2.86-8.74L2.86-4.09L7.34-8.74L15.29-8.74L15.29-2.46L8.85-2.46L3.42 3.14L3.42 19.15L-3.98 19.15ZM18.93 19.15L18.93-20.83L26.32-20.83L26.32 1.51L31.19 1.51L38.30-8.74L46.48-8.74L37.18 4.70L47.04 19.15L38.86 19.15L31.02 7.78L26.32 7.78L26.32 19.15L18.93 19.15ZM50.96 19.15L50.96-20.05L79.30-20.05L79.30-13.61L58.58-13.61L58.58-3.70L77.67-3.70L77.67 2.63L58.58 2.63L58.58 12.71L79.30 12.71L79.30 19.15L50.96 19.15ZM95.20 19.15L95.20 3.14L81.26-20.05L89.60-20.05L98.95-3.98L99.06-3.98L108.42-20.05L116.76-20.05L102.82 3.14L102.82 19.15L95.20 19.15ZM120.18 19.15L114.52 13.44L114.52-2.91L120.29-8.74L136.02-8.74L141.85-2.91L141.85 7.67L121.91 7.67L121.91 11.26L123.70 13.10L132.83 13.10L134.51 11.37L134.51 9.91L141.79 9.91L141.79 13.55L136.25 19.15L120.18 19.15ZM121.91 2.52L134.46 2.52L134.46-0.73L132.55-2.69L123.82-2.69L121.91-0.73L121.91 2.52Z" />
+    
+    <!-- Layer 1: Foreground text -->
+    <path class="front-text" d="M-134.79 19.15L-141.29 12.66L-141.29-13.55L-134.79-20.05L-117.43-20.05L-110.94-13.55L-110.94 12.66L-117.43 19.15L-134.79 19.15ZM-131.21 12.66L-121.02 12.66L-118.55 10.19L-118.55-11.09L-121.02-13.55L-131.21-13.55L-133.67-11.09L-133.67 10.19L-131.21 12.66ZM-78.57 19.15L-86.91 19.15L-93.07 10.64L-99.23 19.15L-107.58 19.15L-97.16 4.98L-107.30-8.74L-98.95-8.74L-93.07-0.56L-87.19-8.74L-78.85-8.74L-88.93 5.10L-78.57 19.15ZM-74.65 19.15L-74.65-20.05L-49.56-20.05L-42.84-13.33L-42.84 12.43L-49.56 19.15L-74.65 19.15ZM-67.03 12.66L-53.31 12.66L-50.46 9.80L-50.46-10.70L-53.31-13.55L-67.03-13.55L-67.03 12.66ZM-20.27 19.15L-20.27 11.87L-39.20 11.87L-39.20 4.20L-21.78-20.05L-12.66-20.05L-12.66 5.38L-7.90 5.38L-7.90 11.87L-12.66 11.87L-12.66 19.15L-20.27 19.15ZM-31.75 5.60L-19.94 5.60L-19.94-11.54L-20.16-11.54L-31.75 4.82L-31.75 5.60ZM-3.98 19.15L-3.98-8.74L2.86-8.74L2.86-4.09L7.34-8.74L15.29-8.74L15.29-2.46L8.85-2.46L3.42 3.14L3.42 19.15L-3.98 19.15ZM18.93 19.15L18.93-20.83L26.32-20.83L26.32 1.51L31.19 1.51L38.30-8.74L46.48-8.74L37.18 4.70L47.04 19.15L38.86 19.15L31.02 7.78L26.32 7.78L26.32 19.15L18.93 19.15ZM50.96 19.15L50.96-20.05L79.30-20.05L79.30-13.61L58.58-13.61L58.58-3.70L77.67-3.70L77.67 2.63L58.58 2.63L58.58 12.71L79.30 12.71L79.30 19.15L50.96 19.15ZM95.20 19.15L95.20 3.14L81.26-20.05L89.60-20.05L98.95-3.98L99.06-3.98L108.42-20.05L116.76-20.05L102.82 3.14L102.82 19.15L95.20 19.15ZM120.18 19.15L114.52 13.44L114.52-2.91L120.29-8.74L136.02-8.74L141.85-2.91L141.85 7.67L121.91 7.67L121.91 11.26L123.70 13.10L132.83 13.10L134.51 11.37L134.51 9.91L141.79 9.91L141.79 13.55L136.25 19.15L120.18 19.15ZM121.91 2.52L134.46 2.52L134.46-0.73L132.55-2.69L123.82-2.69L121.91-0.73L121.91 2.52Z" />
+  </g>
+</svg>
