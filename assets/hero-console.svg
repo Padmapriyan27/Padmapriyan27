@@ -278,29 +278,11 @@
   <!-- ==================== MIDDLE PANEL: CONSOLE ==================== -->
   <!-- Centered Identity & Hacker Console Lines -->
   <g transform="translate(425, 0)">
-    <!-- Glow behind Title -->
-    <text x="0" y="90" class="text-orbitron title-glowing" text-anchor="middle">0xD4rkEYe</text>
+    <!-- Center Title vertically at y="125" -->
+    <text x="0" y="125" class="text-orbitron title-glowing" text-anchor="middle">0xD4rkEYe</text>
     
-    <!-- Subtitle -->
-    <text x="0" y="115" class="text-mono" font-size="12" fill="#B8FF66" text-anchor="middle">CYBERSECURITY RESEARCHER &amp; OFFENSIVE OPERATOR</text>
-    
-    <!-- Console Dividers -->
-    <line x1="-180" y1="130" x2="180" y2="130" stroke="#0d2e0f" stroke-dasharray="4 4" />
-
-    <!-- Simulated Command stdout Lines -->
-    <g transform="translate(0, 140)" class="text-mono">
-      <!-- Line 1 -->
-      <text x="-185" y="10" class="console-text-dim">&gt; SNA_DECK_LINK: <tspan class="console-text">ACTIVE // ESTABLISHED </tspan><tspan class="status-active" fill="var(--color-accent-lime)" font-size="12">●</tspan></text>
-
-      <!-- Line 2 -->
-      <text x="-185" y="30" class="console-text-dim">&gt; TARGET_ENV: <tspan class="console-text">YUKTHI_CTF_2.0 // CHALLENGE_AUTHOR</tspan></text>
-
-      <!-- Line 3 -->
-      <text x="-185" y="50" class="console-text-dim">&gt; OBJECTIVE: <tspan class="console-text">WEAPONIZING C, PYTHON &amp; PHP</tspan></text>
-
-      <!-- Line 4 (with blinking cursor) -->
-      <text x="-185" y="70" class="console-text-dim">&gt; SYSTEM_STATUS: <tspan class="console-text">LISTENING FOR CONNECTIONS...</tspan><tspan class="console-cursor" fill="var(--color-accent-lime)">█</tspan></text>
-    </g>
+    <!-- Center Subtitle vertically at y="155" -->
+    <text x="0" y="155" class="text-mono" font-size="12" fill="#B8FF66" text-anchor="middle">CYBERSECURITY RESEARCHER &amp; OFFENSIVE OPERATOR</text>
   </g>
 
   <!-- Decorative crosshairs in middle console -->
