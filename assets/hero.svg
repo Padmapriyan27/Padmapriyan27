@@ -290,22 +290,16 @@
     <!-- Simulated Command stdout Lines -->
     <g transform="translate(0, 140)" class="text-mono">
       <!-- Line 1 -->
-      <text x="-180" y="10" class="console-text-dim">&gt; SNA_DECK_LINK:</text>
-      <text x="-65" y="10" class="console-text">ACTIVE // ESTABLISHED</text>
-      <circle cx="115" cy="6" r="3.5" class="status-active" />
+      <text x="-185" y="10" class="console-text-dim">&gt; SNA_DECK_LINK: <tspan class="console-text">ACTIVE // ESTABLISHED </tspan><tspan class="status-active" fill="var(--color-accent-lime)" font-size="12">●</tspan></text>
 
       <!-- Line 2 -->
-      <text x="-180" y="30" class="console-text-dim">&gt; TARGET_ENV:</text>
-      <text x="-80" y="30" class="console-text">YUKTHI_CTF_2.0 // CHALLENGE_AUTHOR</text>
+      <text x="-185" y="30" class="console-text-dim">&gt; TARGET_ENV: <tspan class="console-text">YUKTHI_CTF_2.0 // CHALLENGE_AUTHOR</tspan></text>
 
       <!-- Line 3 -->
-      <text x="-180" y="50" class="console-text-dim">&gt; OBJECTIVE:</text>
-      <text x="-85" y="50" class="console-text">WEAPONIZING C, PYTHON &amp; PHP</text>
+      <text x="-185" y="50" class="console-text-dim">&gt; OBJECTIVE: <tspan class="console-text">WEAPONIZING C, PYTHON &amp; PHP</tspan></text>
 
       <!-- Line 4 (with blinking cursor) -->
-      <text x="-180" y="70" class="console-text-dim">&gt; SYSTEM_STATUS:</text>
-      <text x="-65" y="70" class="console-text">LISTENING FOR CONNECTIONS...</text>
-      <rect x="148" y="59" width="7" height="13" fill="var(--color-accent-lime)" class="console-cursor" />
+      <text x="-185" y="70" class="console-text-dim">&gt; SYSTEM_STATUS: <tspan class="console-text">LISTENING FOR CONNECTIONS...</tspan><tspan class="console-cursor" fill="var(--color-accent-lime)">█</tspan></text>
     </g>
   </g>
 
