@@ -47,7 +47,7 @@ text, tspan, .field {
         </div>
       </div>
 
-<pre><div class="stdin"><span class="ps1-path">padmapriyan27@metrics</span>:<span class="ps1-location">~</span>$ whoami</div><div class="stdout"><b>0xD4rkEYe</b> registered=2y, uid=4253, gid=0
+<pre><div class="stdin"><span class="ps1-path">padmapriyan27@metrics</span>:<span class="ps1-location">~</span>$ whoami</div><div class="stdout"><b>0xD4rkEYe</b> registered=3y, uid=4253, gid=0
   contributed to 3 repositories <b><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span><span style="color:#ebedf0">#</span></b>
   followed by <b>3</b> users
 </div>
@@ -64,7 +64,7 @@ text, tspan, .field {
   <b>    5</b> repositories starred
   <b>    6</b> repositories watched
 </div>
-<div class="stdin"><span class="ps1-path">padmapriyan27@metrics</span>:<span class="ps1-location">~</span>$ ls -lh github/repositories</div><div class="stdout">Total 1 repository - 626 kB
+<div class="stdin"><span class="ps1-path">padmapriyan27@metrics</span>:<span class="ps1-location">~</span>$ ls -lh github/repositories</div><div class="stdout">Total 1 repository - 674 kB
 -r--  <b>    0</b>  stargazers
 -r--  <b>    0</b>  forks
 -r--  <b>    0</b>  watchers
