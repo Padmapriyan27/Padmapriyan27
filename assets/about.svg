@@ -72,8 +72,8 @@
   <g transform="translate(130, 55)" class="text-mono" font-size="13">
     <text x="0" y="18" fill="#4c8a3c">HANDLE : <tspan fill="#D4FF00" font-weight="bold">0xD4rkEYe</tspan></text>
     <text x="0" y="38" fill="#4c8a3c">NAME   : <tspan fill="#FFFFFF">Padmapriyan N</tspan></text>
-    <text x="0" y="58" fill="#4c8a3c">REPOS  : <tspan fill="#FFFFFF">14</tspan></text>
-    <text x="0" y="78" fill="#4c8a3c">STATUS : <tspan fill="#9CFF2E" class="pulse-dot">STANDBY</tspan></text>
+    <text x="0" y="58" fill="#4c8a3c">REPOS  : <tspan fill="#FFFFFF">15</tspan></text>
+    <text x="0" y="78" fill="#4c8a3c">STATUS : <tspan fill="#9CFF2E" class="pulse-dot">ACTIVE_NODE</tspan></text>
   </g>
 
   <!-- Left Bottom Log Details -->
@@ -110,6 +110,6 @@
 
     <!-- Console signature line -->
     <line x1="0" y1="168" x2="475" y2="168" stroke="#0d2e0f" stroke-width="1" />
-    <text x="0" y="180" class="text-mono" font-size="9.5" fill="#4c8a3c">OPERATIONAL STATUS: SYNCED // 2026-11-23 06:26 UTC</text>
+    <text x="0" y="180" class="text-mono" font-size="9.5" fill="#4c8a3c">OPERATIONAL STATUS: SYNCED // 2026-11-23 23:33 UTC</text>
   </g>
 </svg>
