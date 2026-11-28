@@ -86,7 +86,7 @@
     
     <!-- Activity Index Progress Bar -->
     <rect x="235" y="72" width="125" height="7" rx="2.5" fill="#0d2e0f" />
-    <rect x="235" y="72" width="124" height="7" rx="2.5" fill="#D4FF00" />
+    <rect x="235" y="72" width="125" height="7" rx="2.5" fill="#D4FF00" />
   </g>
 
   <!-- ==================== CARD 2 ==================== -->
